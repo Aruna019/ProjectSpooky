@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://begfwm0fvmber"]
 
-[ext_resource type="Script" path="res://core/menu/mainmenu.gd" id="1_mnh8q"]
+[ext_resource type="Script" uid="uid://dg07dttnnjhqp" path="res://core/menu/mainmenu.gd" id="1_mnh8q"]
 [ext_resource type="FontFile" uid="uid://eho7j505n3l5" path="res://ui/Baby Halloween.ttf" id="2_fyu4g"]
 [ext_resource type="Texture2D" uid="uid://cr60bxrlljj32" path="res://core/menu/background.png" id="2_sg8h6"]
 
@@ -57,12 +57,14 @@ theme_override_font_sizes/font_size = 30
 text = "how to play"
 
 [node name="controls" type="Button" parent="backgroundtext/columns/center"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fyu4g")
 theme_override_font_sizes/font_size = 30
 text = "CONTROLS"
 
 [node name="credits" type="Button" parent="backgroundtext/columns/center"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_fyu4g")
 theme_override_font_sizes/font_size = 30
@@ -95,28 +97,6 @@ text = "Activate joystick"
 visible = false
 layout_mode = 2
 bbcode_enabled = true
-text = "[center][b]Coding[/b]
-Ana and Victor Buendía
-
-[b]Level design[/b]
-Ana Buendía
-
-[b]Music[/b]
-Victor Buendía
-
-[b]3D models[/b]
-Kenny CC0 Graveyard pack
-
-[b]Font[/b]
-Babyhalloween by Project type[/center]
-
-[center][b]Twitter, Github, ItchIO[/b]
-@BuendiaGames
-
-[b]Other resources[/b]
-CC0 SFX by Ajanhallinta, IENBA (freesound) and Dawith (opengameart).
-CC0 texture designed by Freepik.
-[/center]"
 fit_content = true
 
 [node name="howtoplay_text" type="RichTextLabel" parent="backgroundtext/columns/center"]
@@ -142,6 +122,16 @@ text = "Back"
 [node name="filler_right" type="Control" parent="backgroundtext/columns"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="backgroundtext"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 161.0
+offset_right = 861.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("2_fyu4g")
+theme_override_font_sizes/font_size = 60
+text = "Halloween Runner"
 
 [node name="Timer" type="Timer" parent="."]
 
